@@ -2,6 +2,9 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import Button, { Group, Label } from '@smui/button';
+
+	let clicked = 0;
 </script>
 
 <svelte:head>
@@ -24,6 +27,12 @@
 	<h2>
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
+
+	<Group>
+		<Button on:click={() => clicked++}><Label>One</Label></Button>
+		<Button on:click={() => clicked++}><Label>Two</Label></Button>
+		<Button on:click={() => clicked++}><Label>Three</Label></Button>
+	</Group>
 
 	<Counter />
 </section>
