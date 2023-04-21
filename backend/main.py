@@ -54,6 +54,6 @@ async def select_category():
   return query.all()
 
 # put
-@app.put("/member/{item_id}")
+@app.put("/join/{item_id}")
 def read_item(item_id: int, item: Item):
     return {"item_price": item.price, "item_id": item_id}
